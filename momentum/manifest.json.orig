@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Unstability Bot",
+  "version": "1.0.0.1",
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["https://www.unstability.ai/*"],
+      "css": ["lumen.css"],
+      "js": ["lumen.js"],
+      "type": "module"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "web_accessible_resources": [
+    "data/prompts.json"
+  ]
+
+}
